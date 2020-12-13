@@ -1,4 +1,4 @@
-package com.example.springlearning.aop.dao;
+package com.example.springlearning.aop.pointcutDeclarations.dao;
 
 import org.springframework.stereotype.Component;
 

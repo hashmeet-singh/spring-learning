@@ -1,4 +1,4 @@
-package com.example.springlearning.aop;
+package com.example.springlearning.aop.pointcutDeclarations;
 
 public class Account {
     private String name;

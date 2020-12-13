@@ -1,7 +1,7 @@
-package com.example.springlearning.aop;
+package com.example.springlearning.aop.pointcutDeclarations;
 
-import com.example.springlearning.aop.dao.AccountDAO;
-import com.example.springlearning.aop.dao.MemembershipDAO;
+import com.example.springlearning.aop.pointcutDeclarations.dao.AccountDAO;
+import com.example.springlearning.aop.pointcutDeclarations.dao.MemembershipDAO;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class MainApp {
@@ -24,6 +24,8 @@ public class MainApp {
 
         Account account = new Account();
         accountDao.addAccount(account);
+
+        accountDao.goToSleep();
         //Close the context
         applicationContext.close();
 

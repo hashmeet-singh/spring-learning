@@ -1,6 +1,6 @@
-package com.example.springlearning.aop.dao;
+package com.example.springlearning.aop.pointcutDeclarations.dao;
 
-import com.example.springlearning.aop.Account;
+import com.example.springlearning.aop.pointcutDeclarations.Account;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -16,5 +16,8 @@ public class AccountDAO {
 
     public void addSomeStuff(){
         System.out.println("Adding Some Stuff to DB");
+    }
+    public void goToSleep(){
+        System.out.println("Going to sleep");
     }
 }

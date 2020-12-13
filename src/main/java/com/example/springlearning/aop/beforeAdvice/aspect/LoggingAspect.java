@@ -1,4 +1,4 @@
-package com.example.springlearning.aop.aspect;
+package com.example.springlearning.aop.beforeAdvice.aspect;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -18,7 +18,7 @@ public class LoggingAspect {
     }
 
     //Match addAccount only from AccountDAO
-    @Before("execution(public void com.example.springlearning.aop.dao.AccountDAO.addAccount())")
+    @Before("execution(public void com.example.springlearning.aop.beforeAdvice.dao.AccountDAO.addAccount())")
     public void beforAddAccountSpecifictoAccountDAO(){
         System.out.println("====> @Before only running befor adding aaccount for AccountDAO only");
     }
@@ -30,8 +30,14 @@ public class LoggingAspect {
     }
 
     //Match all methods starting with add and have Account parameter
-    @Before("execution(* add*(com.example.springlearning.aop.Account))")
+    @Before("execution(* add*(com.example.springlearning.aop.beforeAdvice.Account))")
     public void beforeParamAdvice(){
         System.out.println("====> @Before advice running only on methods starting with add and have Account as parameter");
+    }
+
+    //Match any method of any class with any params in dao package
+    @Before("execution(* com.example.springlearning.aop.beforeAdvice.dao.*.*(..))")
+    public void beforepackageAdvice(){
+        System.out.println("====> @Before advice running on any method with any params in dao package");
     }
 }
