@@ -20,7 +20,10 @@ public class MainApp {
         //Call membership business method
         memembershipDAO.addAccount();
 
+        accountDao.addSomeStuff();
 
+        Account account = new Account();
+        accountDao.addAccount(account);
         //Close the context
         applicationContext.close();
 
